@@ -22,7 +22,7 @@ const host = "0.0.0.0";
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {});
+app.get("/", (req: Request, res: Response) => { });
 app.post("/verify_score", async (req: Request, res: Response) => {
   try {
     const { address, score } = req.body;
@@ -44,6 +44,4 @@ app.post("/verify_score", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://${host}:${port}`);
-});
+module.exports = app;
