@@ -22,7 +22,9 @@ const host = "0.0.0.0";
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => { });
+app.get("/", (req: Request, res: Response) => {
+  res.send("welcome to holiday rush backend")
+});
 app.post("/verify_score", async (req: Request, res: Response) => {
   try {
     const { address, score } = req.body;
