@@ -1,16 +1,8 @@
-
-
-export const contract_address = "0x3F6984A9FbA98577C042af53504239f76Cf665F0";
+export const contract_address = "0xd6731d1fDBB9308d960DEbecB99d96C74855A3B1";
 
 export const abi = [
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "initialOwner",
-        type: "address",
-      },
-    ],
+    inputs: [],
     stateMutability: "nonpayable",
     type: "constructor",
   },
@@ -114,8 +106,52 @@ export const abi = [
     type: "function",
   },
   {
-    inputs: [],
+    inputs: [
+      {
+        internalType: "address",
+        name: "_player",
+        type: "address",
+      },
+    ],
+    name: "get_nonce",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_player",
+        type: "address",
+      },
+    ],
     name: "get_player_score",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "nonce_used",
     outputs: [
       {
         internalType: "uint256",
@@ -229,4 +265,3 @@ export const abi = [
     type: "function",
   },
 ];
-
